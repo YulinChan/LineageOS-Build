@@ -1,6 +1,6 @@
 #!/bin/sh
 ## setup env
-wget -c https://github.com/sgreben/http-file-server/releases/download/1.6.1/http-file-server_1.6.1_linux_x86_64.tar.gz
+wget https://github.com/sgreben/http-file-server/releases/download/1.6.1/http-file-server_1.6.1_linux_x86_64.tar.gz
 tar xvf http-file-server_1.6.1_linux_x86_64.tar.gz
 mv http-file-server /opt
 chmod +x /opt/http-file-server
