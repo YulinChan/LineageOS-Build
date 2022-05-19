@@ -4,6 +4,8 @@ Enviroment：Google Cloud Platforum, ubuntu-latest, 32G RAM, 8 Core CPU, 250G SS
 
 Of course，the more, the better !
 
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
 ### Install the build packages
 
 Several packages are needed to build LineageOS. You can install these using your distribution’s package manager.

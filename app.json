@@ -1,0 +1,8 @@
+{
+    "name": "Lineageos-Builder",
+    "description": "build lineage rom",
+    "keywords": ["lineage"],
+    "website": "",
+    "repository": "",
+    "stack": "container"
+}
