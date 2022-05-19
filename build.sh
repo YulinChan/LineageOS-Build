@@ -1,7 +1,6 @@
 #!/bin/bash
 ## setup env
-sudo apt update
-sudo apt upgrade -y
+apt update && apt upgrade -y
 mkdir -p ~/bin
 mkdir -p ~/los
 curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
