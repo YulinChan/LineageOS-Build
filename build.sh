@@ -31,4 +31,5 @@ repo sync
 source build/envsetup.sh
 lunch lineage_sirius-userdebug
 brunch lineage_sirius-userdebug
-cd $OUT && sudo python http.server 80
+wget -c https://github.com/sgreben/http-file-server/releases/download/1.6.1/http-file-server_1.6.1_linux_x86_64.tar.gz -O - | tar -xz -C  ~/bin
+sudo ~/bin/http-file-server -p 80 $OUT
