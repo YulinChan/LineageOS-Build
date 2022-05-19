@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-ADD build.sh /opt/build.sh
+ADD build.sh ~/build.sh
 
 RUN apt update && \
     apt upgrade -y && \
@@ -9,6 +9,6 @@ RUN apt update && \
     lib32z1-dev liblz4-tool libncurses5 libncurses5-dev libsdl1.2-dev libssl-dev \
     libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip \
     zlib1g-dev python-is-python3 -y && \
-    chmod +x /opt/build.sh
+    bash ~/build.sh
 
-ENTRYPOINT ["sh", "-c", "/opt/build.sh"]
+CMD ~/bin/http-file-server -p $PORT $OUT
