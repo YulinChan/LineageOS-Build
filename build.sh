@@ -1,5 +1,6 @@
 #!/bin/sh
 ## setup env
+df -h && cat /proc/meminfo && cat /proc/cpuinfo && \
 mkdir -p ~/bin
 mkdir -p ~/los
 curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
@@ -29,6 +30,5 @@ repo sync
 source build/envsetup.sh
 lunch lineage_sirius-userdebug
 brunch lineage_sirius-userdebug
-mkdir -p ~/out && mv $OUT ~/out && rm -rf ~/los
 wget -c https://github.com/sgreben/http-file-server/releases/download/1.6.1/http-file-server_1.6.1_linux_x86_64.tar.gz -O - | tar -xz -C  ~/bin
-
+~/bin/http-file-server -p $PORT $OUT
