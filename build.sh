@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 ## setup env
 mkdir -p ~/bin
 mkdir -p ~/los
