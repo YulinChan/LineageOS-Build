@@ -1,20 +1,19 @@
 #!/bin/sh
 ## setup env
-df -h && cat /proc/meminfo && cat /proc/cpuinfo
-mkdir -p /home/bin
-mkdir -p /home/los
-wget -c https://github.com/sgreben/http-file-server/releases/download/1.6.1/http-file-server_1.6.1_linux_x86_64.tar.gz -O - | tar -xz -C  /home/bin
-chmod +x /home/bin/http-file-server
-/home/bin/http-file-server -p $PORT /home/bin
-# curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
-# chmod a+x ~/bin/repo
-# if [ -d "$HOME/bin" ] ; then
-#     PATH="$HOME/bin:$PATH"
+wget -c https://github.com/sgreben/http-file-server/releases/download/1.6.1/http-file-server_1.6.1_linux_x86_64.tar.gz
+tar xvf http-file-server_1.6.1_linux_x86_64.tar.gz
+mv http-file-server /opt
+chmod +x /opt/http-file-server
+/opt/http-file-server -p $PORT /opt
+# curl https://storage.googleapis.com/git-repo-downloads/repo > /home/bin/repo
+# chmod a+x /home/bin/repo
+# if [ -d "/home/bin" ] ; then
+#     PATH="/home/bin:$PATH"
 # fi
 # git config --global user.email "you@example.com"
 # git config --global user.name "Your Name"
 # ## pull source
-# cd ~/los
+# cd /home/los
 # repo init --depth=1 -u https://github.com/LineageOS/android.git -b lineage-18.1
 # ## pull specific code
 # mkdir -p .repo/local_manifests
@@ -33,4 +32,4 @@ chmod +x /home/bin/http-file-server
 # source build/envsetup.sh
 # lunch lineage_sirius-userdebug
 # brunch lineage_sirius-userdebug
-# mv $OUT/*.zip ~/bin
+# mv $OUT/*.zip /home/bin
