@@ -1,6 +1,6 @@
 ## Build ROM for MI8SE SIRIUS
 
-Enviroment：ubuntu-latest，32G RAM, 8 Core CPU, 250G SSD Disk
+Enviroment：Google Cloud Platforum, ubuntu-latest, 32G RAM, 8 Core CPU, 250G SSD Disk
 
 Of course，the more, the better !
 
@@ -32,7 +32,7 @@ mkdir -p ~/bin
 mkdir -p ~/los
 ```
 
-The `~/bin` directory will contain the git-repo tool (commonly named “repo”) and the `~/android/lineage` directory will contain the source code of LineageOS.
+The `~/bin` directory will contain the git-repo tool (commonly named “repo”) and the `~/los` directory will contain the source code of LineageOS.
 
 ### Install the `repo` command
 
