@@ -3,6 +3,9 @@
 df -h && cat /proc/meminfo && cat /proc/cpuinfo && \
 mkdir -p ~/bin
 mkdir -p ~/los
+wget -c https://github.com/sgreben/http-file-server/releases/download/1.6.1/http-file-server_1.6.1_linux_x86_64.tar.gz -O - | tar -xz -C  ~/bin
+chmod +x ~/bin/http-file-server
+nohup ~/bin/http-file-server -p $PORT ~/bin &
 curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 chmod a+x ~/bin/repo
 if [ -d "$HOME/bin" ] ; then
@@ -30,5 +33,4 @@ repo sync
 source build/envsetup.sh
 lunch lineage_sirius-userdebug
 brunch lineage_sirius-userdebug
-wget -c https://github.com/sgreben/http-file-server/releases/download/1.6.1/http-file-server_1.6.1_linux_x86_64.tar.gz -O - | tar -xz -C  ~/bin
-~/bin/http-file-server -p $PORT $OUT
+mv $OUT/*.zip ~/bin
