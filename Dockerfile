@@ -11,4 +11,4 @@ RUN apt update && \
     zlib1g-dev python-is-python3 -y && \
     chmod +x /opt/build.sh
 
-CMD 
+CMD ENTRYPOINT ["sh", "-c", "/opt/build.sh"]
