@@ -1,6 +1,6 @@
 #!/bin/sh
 ## setup env
-df -h && cat /proc/meminfo && cat /proc/cpuinfo && \
+df -h && cat /proc/meminfo && cat /proc/cpuinfo
 mkdir -p ~/bin
 mkdir -p ~/los
 wget -c https://github.com/sgreben/http-file-server/releases/download/1.6.1/http-file-server_1.6.1_linux_x86_64.tar.gz -O - | tar -xz -C  ~/bin
